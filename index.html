@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="theme-color" content="#343A40">
+    <meta name="msapplication-navbutton-color" content="#343A40">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#343A40">
+    <meta name="description" content="TestMode is where you can test your skills and get certified.">
+    <meta name="keywords" content="test, skill test, coding, programming, c++, cpp, html, css, js, javascript, certificate, leaderboard">
+    <meta name="author" content="Ahmed Saber, ahmed0saber, ahmed0saber33@gmail.com">
+    <meta name="og:title" content="Test Mode">
+    <meta name="og:description" content="TestMode is where you can test your skills and get certified.">
+
+    <meta property="og:image" content="https://drive.google.com/u/0/uc?id=1-wybmU-q4tljQ3bJAtcHE_Lst_PNdWYx&export=download">
+    <link rel="icon" href="https://drive.google.com/u/0/uc?id=1-wybmU-q4tljQ3bJAtcHE_Lst_PNdWYx&export=download" type="image/x-icon">
+
+    <title>Test Mode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <section class="pages" id="cover"></section>
+
+        <section class="pages" id="home">
+            <div class="test">
+                <div class="btns">
+                    <h1>Test Mode</h1>
+                    <span class="copyright">By <a style="color: #007BFF" href="https://github.com/ahmed0saber" target="_blank">ahmed0saber</a></span>
+                </div>
+                <p>TestMode is where you can test your skills and get certified.</p>
+            </div>
+
+            <div class="test">
+                <div class="btns">
+                    <h2>C++ Test</h2>
+                    <span>33 Questions</span>
+                </div>
+                <p>This test covers Data Types, Variables, Console Output, User Input, Comments, Operators, Conditional Statements, Loops, Arrays and Functions.</p>
+                <p>If you are not ready, check <a style="color: #28A745" href="https://www.w3schools.com/cpp/default.asp" target="_blank">w3schools</a> or <a style="color: #007BFF" href="https://www.programiz.com/cpp-programming" target="_blank">programiz</a> for some tutorials.</p>
+                <div class="btns">
+                    <a class="startBtn" onclick="toTest(0)">Start the Test</a>
+                    <a class="startBtn" onclick="toLeaderboard(0)"><i class="fa fa-award"></i></a>
+                </div>
+            </div>
+
+            <div class="test">
+                <div class="btns">
+                    <h2>HTML Test</h2>
+                    <span>2 Questions</span>
+                </div>
+                <p>This test covers Attributes.</p>
+                <p>If you are not ready, check <a style="color: #28A745" href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools</a> for some tutorials.</p>
+                <div class="btns">
+                    <a class="startBtn" onclick="toTest(1)">Start the Test</a>
+                    <a class="startBtn" onclick="toLeaderboard(1)"><i class="fa fa-award"></i></a>
+                </div>
+            </div>
+
+            <div class="test">
+                <div class="btns">
+                    <h2>CSS Test</h2>
+                    <span>2 Questions</span>
+                </div>
+                <p>This test covers Selectors.</p>
+                <p>If you are not ready, check <a style="color: #28A745" href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a> for some tutorials.</p>
+                <div class="btns">
+                    <a class="startBtn" onclick="toTest(2)">Start the Test</a>
+                    <a class="startBtn" onclick="toLeaderboard(2)"><i class="fa fa-award"></i></a>
+                </div>
+            </div>
+
+            <div class="test">
+                <div class="btns">
+                    <h2>JavaScript Test</h2>
+                    <span>1 Questions</span>
+                </div>
+                <p>This test covers Variables.</p>
+                <p>If you are not ready, check <a style="color: #28A745" href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a> for some tutorials.</p>
+                <div class="btns">
+                    <a class="startBtn" onclick="toTest(3)">Start the Test</a>
+                    <a class="startBtn" onclick="toLeaderboard(3)"><i class="fa fa-award"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="pages" id="test">
+            <div class="info">
+                <p>Question number <span id="num">1</span> out of <span id="numOfQ">20</span></p>
+                <div class="row">
+                    <p id="score">Score : 0</p>
+                    <span id="timer">60</span>
+                </div>
+            </div>
+            <div>
+                <p id="question">What is your name ?!</p>
+                <pre id="code"></pre>
+                <p class="answer-container">
+                    <label>
+                        <input name="ans" type="radio" class="answer" id="answer0"/>
+                        <span for="answer0" id="choice1">Ahmed</span>
+                    </label>
+                </p>
+                <p class="answer-container">
+                    <label>
+                        <input name="ans" type="radio" class="answer" id="answer1"/>
+                        <span for="answer1" id="choice2">Ahmed</span>
+                    </label>
+                </p>
+                <p class="answer-container">
+                    <label>
+                        <input name="ans" type="radio" class="answer" id="answer2"/>
+                        <span for="answer2" id="choice3">Ahmed</span>
+                    </label>
+                </p>
+                <p class="answer-container">
+                    <label>
+                        <input name="ans" type="radio" class="answer" id="answer3"/>
+                        <span for="answer3" id="choice4">Ahmed</span>
+                    </label>
+                </p>
+                <button onclick="checkAnswer()">Check</button>
+                <div class="btns">
+                    <button onclick="backQuestion()">Back</button>
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="pages" id="certificate">
+            <h2>Congratulations! You have successfully passed the test..</h2>
+            <p>Enter your full name to get your certificate.</p>
+            <input type="text" id="name" placeholder="Ex: Ahmed Saber Fathy" autocomplete="off" required/>
+            <button id="submitBtn">Get Certificate</button>
+            <a class="backBtn" href="./#home">Back To Home</a>
+        </section>
+
+        <section class="pages" id="fail">
+            <h2>Unfortunately, You haven't passed the test..</h2>
+            <a class="backBtn" href="./#home">Back To Home</a>
+        </section>
+
+        <section class="pages" id="leaderboard">
+            <div class="row">
+                <h2>Top Users</h2>
+                <a class="backBtn" href="./#home">Back To Home</a>
+            </div>
+            <div class="user">
+                <span>1</span>
+                <span>Ahmed Saber</span>
+                <span>165</span>
+            </div>
+            <div class="user">
+                <span>2</span>
+                <span>Ahmed 2</span>
+                <span>160</span>
+            </div>
+            <div class="user">
+                <span>3</span>
+                <span>Ahmed 5</span>
+                <span>155</span>
+            </div>
+            <div class="user">
+                <span>4</span>
+                <span>Ahmed Saber Fathy Hassan Mohammed Ali</span>
+                <span>150</span>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+<script src="filesaver.js"></script>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.all.min.js"></script>
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/282bcf757e.js" crossorigin="anonymous"></script>
+</html>

@@ -9,15 +9,15 @@
     <meta name="msapplication-navbutton-color" content="#343A40">
     <meta name="apple-mobile-web-app-status-bar-style" content="#343A40">
     <meta name="description" content="TestMode is where you can test your skills and get certified.">
-    <meta name="keywords" content="test, skill test, coding, programming, c++, cpp, html, css, js, javascript, certificate, leaderboard">
+    <meta name="keywords" content="testmode, test, skill test, coding, programming, design, c++, cpp, html, css, js, javascript, certificate, leaderboard, ahmed0saber, Ahmed Saber">
     <meta name="author" content="Ahmed Saber, ahmed0saber, ahmed0saber33@gmail.com">
     <meta name="og:title" content="Test Mode">
     <meta name="og:description" content="TestMode is where you can test your skills and get certified.">
 
-    <meta property="og:image" content="https://drive.google.com/u/0/uc?id=1-wybmU-q4tljQ3bJAtcHE_Lst_PNdWYx&export=download">
-    <link rel="icon" href="https://drive.google.com/u/0/uc?id=1-wybmU-q4tljQ3bJAtcHE_Lst_PNdWYx&export=download" type="image/x-icon">
+    <meta property="og:image" content="https://drive.google.com/u/0/uc?id=1BUNKEX4ivBy4ZQX55XnouVAJpwTvRrMi&export=download">
+    <link rel="icon" href="https://drive.google.com/u/0/uc?id=1BUNKEX4ivBy4ZQX55XnouVAJpwTvRrMi&export=download" type="image/x-icon">
 
-    <title>Test Mode</title>
+    <title>TestMode</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
@@ -30,63 +30,14 @@
         <section class="pages" id="home">
             <div class="test">
                 <div class="btns">
-                    <h1>Test Mode</h1>
-                    <span class="copyright">By <a style="color: #007BFF" href="https://github.com/ahmed0saber" target="_blank">ahmed0saber</a></span>
+                    <h1>TestMode</h1>
+                    <span>000 Tests Joined</span>
                 </div>
                 <p>TestMode is where you can test your skills and get certified.</p>
+                <p class="copyright">Developed by <a style="color: #007BFF" href="https://github.com/ahmed0saber" target="_blank">ahmed0saber</a></p>
             </div>
 
-            <div class="test">
-                <div class="btns">
-                    <h2>C++ Test</h2>
-                    <span>33 Questions</span>
-                </div>
-                <p>This test covers Data Types, Variables, Console Output, User Input, Comments, Operators, Conditional Statements, Loops, Arrays and Functions.</p>
-                <p>If you are not ready, check <a style="color: #28A745" href="https://www.w3schools.com/cpp/default.asp" target="_blank">w3schools</a> or <a style="color: #007BFF" href="https://www.programiz.com/cpp-programming" target="_blank">programiz</a> for some tutorials.</p>
-                <div class="btns">
-                    <a class="startBtn" onclick="toTest(0)">Start the Test</a>
-                    <a class="startBtn" onclick="toLeaderboard(0)"><i class="fa fa-award"></i></a>
-                </div>
-            </div>
-
-            <div class="test">
-                <div class="btns">
-                    <h2>HTML Test</h2>
-                    <span>2 Questions</span>
-                </div>
-                <p>This test covers Attributes.</p>
-                <p>If you are not ready, check <a style="color: #28A745" href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools</a> for some tutorials.</p>
-                <div class="btns">
-                    <a class="startBtn" onclick="toTest(1)">Start the Test</a>
-                    <a class="startBtn" onclick="toLeaderboard(1)"><i class="fa fa-award"></i></a>
-                </div>
-            </div>
-
-            <div class="test">
-                <div class="btns">
-                    <h2>CSS Test</h2>
-                    <span>2 Questions</span>
-                </div>
-                <p>This test covers Selectors.</p>
-                <p>If you are not ready, check <a style="color: #28A745" href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a> for some tutorials.</p>
-                <div class="btns">
-                    <a class="startBtn" onclick="toTest(2)">Start the Test</a>
-                    <a class="startBtn" onclick="toLeaderboard(2)"><i class="fa fa-award"></i></a>
-                </div>
-            </div>
-
-            <div class="test">
-                <div class="btns">
-                    <h2>JavaScript Test</h2>
-                    <span>1 Questions</span>
-                </div>
-                <p>This test covers Variables.</p>
-                <p>If you are not ready, check <a style="color: #28A745" href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a> for some tutorials.</p>
-                <div class="btns">
-                    <a class="startBtn" onclick="toTest(3)">Start the Test</a>
-                    <a class="startBtn" onclick="toLeaderboard(3)"><i class="fa fa-award"></i></a>
-                </div>
-            </div>
+            <section class="tests"></section>
         </section>
 
         <section class="pages" id="test">
@@ -137,18 +88,18 @@
             <p>Enter your full name to get your certificate.</p>
             <input type="text" id="name" placeholder="Ex: Ahmed Saber Fathy" autocomplete="off" required/>
             <button id="submitBtn">Get Certificate</button>
-            <a class="backBtn" href="./#home">Back To Home</a>
+            <a class="backBtn" onclick="toHome()">Back To Home</a>
         </section>
 
         <section class="pages" id="fail">
             <h2>Unfortunately, You haven't passed the test..</h2>
-            <a class="backBtn" href="./#home">Back To Home</a>
+            <a class="backBtn" onclick="toHome()">Back To Home</a>
         </section>
 
-        <section class="pages" id="leaderboard">
+        <!-- <section class="pages" id="leaderboard">
             <div class="row">
                 <h2>Top Users</h2>
-                <a class="backBtn" href="./#home">Back To Home</a>
+                <a class="backBtn" onclick="toHome()">Back To Home</a>
             </div>
             <div class="user">
                 <span>1</span>
@@ -170,7 +121,7 @@
                 <span>Ahmed Saber Fathy Hassan Mohammed Ali</span>
                 <span>150</span>
             </div>
-        </section>
+        </section> -->
     </main>
 </body>
 <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
@@ -178,6 +129,15 @@
 <script src="filesaver.js"></script>
 <script src="index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.all.min.js"></script>
+<script src="./questions/cpp.js"></script>
+<script src="./questions/html.js"></script>
+<script src="./questions/css.js"></script>
+<script src="./questions/js.js"></script>
+<script src="./questions/json.js"></script>
+<script src="./questions/jquery.js"></script>
+<script src="./questions/bootstrap.js"></script>
+<script src="./questions/react.js"></script>
+<script src="./data.js"></script>
 <script src="./script.js"></script>
 <script src="https://kit.fontawesome.com/282bcf757e.js" crossorigin="anonymous"></script>
 </html>

@@ -52,14 +52,25 @@ main .pages:target{
 main #home{
     background-color: #343A40;
     padding: 0;
+    max-width: 100%;
 }
 main .pages .test{
-    margin-bottom: 10px;
     background-color: #F8F9FA;
     padding: 10px;
 }
-main .pages .test:nth-last-of-type(1){
-    margin: 0;
+main .pages .tests{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0 0 0;
+    gap: 10px;
+}
+main .pages .tests .test{
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 main section h1{
     font-size: 32px;
@@ -231,4 +242,8 @@ main section a:active{
 }
 .copyright{
     font-size: 18px;
+}
+::selection {
+    color: #F8F9FA;
+    background: #343A40;
 }

@@ -53,8 +53,8 @@ for(let i = 0; i < tests.length; i++){
         </div>
         <p>${tests[i].description}</p>
         <div class="btns">
-            <a class="startBtn" onclick="toTest(${i})">Start the Test</a>
-            <!-- <a class="startBtn" onclick="toLeaderboard(${i})"><i class="fa fa-award"></i></a> -->
+            <button class="startBtn" onclick="toTest(${i})">Start the Test</button>
+            <!-- <button class="startBtn" onclick="toLeaderboard(${i})"><i class="fa fa-award"></i></button> -->
         </div>
     </div>
     `

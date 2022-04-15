@@ -96,19 +96,20 @@ main section pre{
     justify-content: space-between;
     align-items: center;
 }
-main section a{
+main section button{
     text-decoration: none;
     cursor: pointer;
 }
-main section a.startBtn{
+main section button.startBtn{
     padding: 10px 30px;
     background-color: #007BFF;
     color: #F8F9FA;
     display: block;
     width: fit-content;
     font-size: 17px;
+    border: none;
 }
-main section a:active{
+main section button:active{
     background-color: #343A40;
 }
 .info{
@@ -132,7 +133,7 @@ main section a:active{
     border: 2px solid #007BFF;
     outline: none;
 }
-#certificate button{
+#certificate button, #fail button{
     width: 100%;
     padding: 10px;
     font-size: 17px;
